@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Login</title>
+  <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+</head>
+<body class="container">
+  <h2>Iniciar sesión</h2>
+  <% if (error) { %><mark><%= error %></mark><% } %>
+  <form method="post" action="/login">
+    <label>Usuario <input name="username" required></label>
+    <label>Contraseña <input type="password" name="password" required></label>
+    <button>Entrar</button>
+  </form>
+  <p>¿No tienes cuenta? <a href="/register">Regístrate</a></p>
+</body>
+</html>

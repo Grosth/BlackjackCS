@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Blackjack Monolito</title>
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+  </head>
+  <body class="container">
+    <h1>Blackjack</h1>
+    <% if (user) { %>
+      <p>Hola, <strong><%= user.username %></strong>. Ve a tu <a href="/dashboard">dashboard</a> o abre el juego en <a href="/app">/app</a>.</p>
+      <form method="post" action="/logout"><button>Salir</button></form>
+    <% } else { %>
+      <p><a href="/login">Iniciar sesión</a> o <a href="/register">Crear cuenta</a>.</p>
+      <p>Puedes jugar la versión React en <a href="/app">/app</a>.</p>
+    <% } %>
+  </body>
+</html>

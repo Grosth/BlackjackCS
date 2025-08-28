@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+</head>
+<body class="container">
+  <h2>Mi Perfil</h2>
+  <article>
+    <header><strong><%= user.username %></strong></header>
+    <p>Puntos: <strong><%= user.points %></strong></p>
+    <p>Ganadas: <strong><%= user.wins %></strong> | Perdidas: <strong><%= user.losses %></strong></p>
+  </article>
+  <p><a href="/app">Jugar Blackjack</a></p>
+  <form method="post" action="/logout"><button>Salir</button></form>
+</body>
+</html>
